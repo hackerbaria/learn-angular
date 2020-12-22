@@ -21,22 +21,22 @@ export class CockpitComponent implements OnInit {
   }
 
 
-  onAddServer() {
+  onAddServer(serverNameInput: HTMLInputElement, serverContentInput: HTMLInputElement) {
     // this.serverElements.push({
     //   type: 'server',
     //   name: this.newServerName,
     //   content: this.newServerContent
     // });
     console.log('onAddServer is called: ' + this.newServerName);
-    this.serverCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent});
+    this.serverCreated.emit({serverName: serverNameInput.value, serverContent: serverContentInput.value});
   }
 
-  onAddBlueprint() {
+  onAddBlueprint(serverNameInput: HTMLInputElement, serverContentInput: HTMLInputElement) {
     // this.serverElements.push({
     //   type: 'blueprint',
     //   name: this.newServerName,
     //   content: this.newServerContent
     // });
-    this.blueServerCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent});
+    this.blueServerCreated.emit({serverName: serverNameInput.value, serverContent: serverContentInput.value});
   }
 }
