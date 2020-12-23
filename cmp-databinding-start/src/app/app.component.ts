@@ -10,12 +10,15 @@ export class AppComponent {
   {type:'blueprint', name:'blueprint server', content:'hello blueprint'}];
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
-    console.log('onServerAdded appcomponent is called: ' + serverData.serverName);
     this.serverElements.push({type:'server', name: serverData.serverName, content: serverData.serverContent});
 
   }
   onBlueServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({type:'blueprint', name: serverData.serverName, content: serverData.serverContent});
+  }
+
+  onChangeFirst() {
+    this.serverElements[0].name = 'Thong';
   }
 
 }
