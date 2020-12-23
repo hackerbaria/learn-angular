@@ -21,4 +21,8 @@ export class AppComponent {
     this.serverElements[0].name = 'Thong';
   }
 
+  onDestroyFirst() {
+    this.serverElements.splice(0,1);
+  }
+
 }
